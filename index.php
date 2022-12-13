@@ -1,6 +1,9 @@
 <?php
-    $paragraph = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestias iusto pariatur consequuntur ipsa, neque quam ea, culpa sed, saepe vero repellat. Consequuntur quia est sint autem aspernatur, perspiciatis at?';
+    $paragraph = 'Lorem ipsum dolor sit amet lorem consectetur adipisicing elit. Lorem Cupiditate molestias iusto lorem pariatur consequuntur ipsa lorem, neque quam ea, culpa sed, saepe lorem vero repellat. Consequuntur lorem quia est sint autem aspernatur, lorem perspiciatis at?';
     $paragraph_length = strlen($paragraph);
+    $censured_word = $_GET['censured_word'];
+    $new_paragraph = str_replace(strtolower($censured_word), "***", strtolower($paragraph));
+    $new_paragraph_length = strlen($new_paragraph);
 ?>
 
 <!DOCTYPE html>
@@ -16,5 +19,9 @@
     <h2>Paragrafo:</h2>
     <p><?php echo $paragraph; ?></p>
     <h4>Lunghezza paragrafo: <?php echo $paragraph_length; ?></h4>
+
+    <h2>Paragrafo censurato:</h2>
+    <p><?php echo $new_paragraph; ?></p>
+    <h4>Lunghezza paragrafo: <?php echo $new_paragraph_length; ?></h4>
 </body>
 </html>
