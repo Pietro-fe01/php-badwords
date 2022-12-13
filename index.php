@@ -16,12 +16,25 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <h2>Paragrafo:</h2>
-    <p><?php echo $paragraph; ?></p>
-    <h4>Lunghezza paragrafo: <?php echo $paragraph_length; ?></h4>
+    <main class="container">
+        <section class="first paragraph">
+            <h2>Paragrafo:</h2>
+            <p><?php echo $paragraph; ?></p>
+            <h4>Lunghezza paragrafo: <?php echo $paragraph_length; ?></h4>
+        </section>
+    
+        <section class="second paragraph">
+            <h2>Paragrafo censurato:</h2>
+            <p><?php echo $new_paragraph; ?></p>
+            <h4>Lunghezza paragrafo: <?php echo $new_paragraph_length; ?></h4>
+        </section>
 
-    <h2>Paragrafo censurato:</h2>
-    <p><?php echo $new_paragraph; ?></p>
-    <h4>Lunghezza paragrafo: <?php echo $new_paragraph_length; ?></h4>
+        <div class="hint">
+            <h4>Esempio richiesta GET:</h4>
+            <a href="http://localhost/BOOLEAN%20PHP/php-badwords/?censured_word=lorem">
+                http://localhost/BOOLEAN%20PHP/php-badwords/?censured_word=lorem
+            </a>
+        </div>
+    </main>
 </body>
 </html>

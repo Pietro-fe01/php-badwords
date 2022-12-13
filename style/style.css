@@ -11,10 +11,42 @@ body{
     background-color: lightcyan;
 }
 
-/* Descrizione:
-Creare una variabile con un paragrafo di testo a vostra scelta.
-Stampare a schermo il paragrafo e la sua lunghezza.
+/*---------------------
+    COMMONS 
+---------------------*/
+.container{
+    max-width: 1200px;
+    margin: auto;
+    background-color: white;
+}
 
-Una parola da censurare viene passata dall'utente tramite parametro GET.
-Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
-asterischi (***) tutte le occorrenze della parola da censurare. */
+/*---------------------
+    MAIN 
+---------------------*/
+main{
+    height: 100vh;
+    padding: 1.875rem;
+    position: relative;
+}
+
+main .paragraph{
+    margin-bottom: 1.875rem;
+    padding-bottom: 1.875rem;
+    border-bottom: 1px solid black;
+}
+
+main .paragraph p{
+    padding: .9375rem 0;
+}
+
+main .paragraph h4{
+    text-decoration: underline;
+}
+
+main .hint{
+    position: absolute;
+    bottom: 1.875rem;
+    left: 1.875rem;
+    background-color: rgba(255, 0, 0, 0.3);
+    padding: .625rem;
+}
