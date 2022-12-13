@@ -1,5 +1,6 @@
 <?php
-    $prova = 'Ciao a tutti!'
+    $paragraph = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestias iusto pariatur consequuntur ipsa, neque quam ea, culpa sed, saepe vero repellat. Consequuntur quia est sint autem aspernatur, perspiciatis at?';
+    $paragraph_length = strlen($paragraph);
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +13,8 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <h1><?php echo $prova ?></h1>
+    <h2>Paragrafo:</h2>
+    <p><?php echo $paragraph; ?></p>
+    <h4>Lunghezza paragrafo: <?php echo $paragraph_length; ?></h4>
 </body>
 </html>
