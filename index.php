@@ -1,9 +1,14 @@
 <?php
-    $paragraph = 'Lorem ipsum dolor sit amet lorem consectetur adipisicing elit. Lorem Cupiditate molestias iusto lorem pariatur consequuntur ipsa lorem, neque quam ea, culpa sed, saepe lorem vero repellat. Consequuntur lorem quia est sint autem aspernatur, lorem perspiciatis at?';
+    $paragraph = 'Lorem ipsum dolor sit amet lorem consectetur adipisicing elit. Lorem Cupiditate molestias iusto lorem pariatur consequuntur ipsa lorem, neque quam ea, culpa sed, saepe lorem vero repellat. Consequuntur lorem quia est sint autem aspernatur, lorem perspiciatis at? Lorem ipsum dolor sit amet lorem consectetur adipisicing elit. Lorem Cupiditate molestias iusto lorem pariatur consequuntur ipsa lorem, neque quam ea, culpa sed, saepe lorem vero repellat. Consequuntur lorem quia est sint autem aspernatur, lorem perspiciatis at? ';
     $paragraph_length = strlen($paragraph);
     $censured_word = $_GET['censured_word'];
-    $new_paragraph = str_replace(strtolower($censured_word), "***", strtolower($paragraph));
-    $new_paragraph_length = strlen($new_paragraph);
+    if(str_contains($paragraph, $censured_word)){
+        $new_paragraph = str_replace(strtolower($censured_word), "***", strtolower($paragraph));
+        $new_paragraph_length = strlen($new_paragraph);
+    } else {
+        $new_paragraph = 'La parola da censurare non esiste.';
+        $new_paragraph_length = 0;
+    }
 ?>
 
 <!DOCTYPE html>
