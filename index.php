@@ -1,7 +1,12 @@
 <?php
+    // Paragrafo stampato in pagina
     $paragraph = 'Lorem ipsum dolor sit amet lorem consectetur adipisicing elit. Lorem Cupiditate molestias iusto lorem pariatur consequuntur ipsa lorem, neque quam ea, culpa sed, saepe lorem vero repellat. Consequuntur lorem quia est sint autem aspernatur, lorem perspiciatis at? Lorem ipsum dolor sit amet lorem consectetur adipisicing elit. Lorem Cupiditate molestias iusto lorem pariatur consequuntur ipsa lorem, neque quam ea, culpa sed, saepe lorem vero repellat. Consequuntur lorem quia est sint autem aspernatur, lorem perspiciatis at? ';
     $paragraph_length = strlen($paragraph);
+
+    // La parola da censurare che viene passata tramite una richiesta all'http GET
     $censured_word = $_GET['censured_word'];
+
+    // Check se la parola da censurare esiste
     if(str_contains($paragraph, $censured_word)){
         $new_paragraph = str_replace(strtolower($censured_word), "***", strtolower($paragraph));
         $new_paragraph_length = strlen($new_paragraph);
