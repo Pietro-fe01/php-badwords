@@ -4,7 +4,7 @@
     $paragraph_length = strlen($paragraph);
 
     // La parola da censurare che viene passata tramite una richiesta all'http GET
-    $censured_word = $_GET['censured_word'];
+    $censured_word = isset($_GET['censured_word']) ? $_GET['censured_word'] : '';
 
     // Check se la parola da censurare esiste
     if(str_contains($paragraph, $censured_word)){
@@ -27,6 +27,12 @@
 </head>
 <body>
     <main class="container">
+        <form action="index.php" method="GET">
+            <label for="censured-word">Parola da censurare</label>
+            <input id="censured-word" name="censured_word" type="text" placeholder="Inserisci parola">
+            <button type="submit">Invia</button>
+        </form>
+
         <section class="first paragraph">
             <h2>Paragrafo:</h2>
             <p><?php echo $paragraph; ?></p>
